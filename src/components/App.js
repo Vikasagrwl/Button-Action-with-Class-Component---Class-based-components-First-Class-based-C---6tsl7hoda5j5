@@ -16,10 +16,11 @@ class App extends Component {
     render() {
     	return(
     		<div id="main">
-			<button onClick={()=>this.handleclick()}>
-				click here
-			</button>
-			<p>{this.state.msg}</p>
+				<button id="click" onClick={()=>this.handleclick()}>
+					click here
+				</button>
+				<p id="para">{this.state.msg}</p>
+				
     		</div>
     	);
     }
