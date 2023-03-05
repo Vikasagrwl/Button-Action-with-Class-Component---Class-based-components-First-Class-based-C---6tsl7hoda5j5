@@ -2,14 +2,24 @@ import React, {Component, useState} from "react";
 import '../styles/App.css';
 
 class App extends Component {
-    constructor(props) {
-		super(props);
+    constructor() {
+		super();
+		this.state={
+			msg:""
+		}
 	};
-
+	handleclick(){
+		this.setState({
+			msg:"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+		})
+	}
     render() {
     	return(
     		<div id="main">
-				{ /* Do not remove this main div!! */ }
+			<button onClick={()=>this.handleclick()}>
+				click here
+			</button>
+			<p>{this.state.msg}</p>
     		</div>
     	);
     }
